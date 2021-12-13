@@ -41,7 +41,7 @@ main{
     border-radius: 20px;
     max-height: 35px;
     padding: 0px 20px;
-    margin-left: 60px;
+    margin-left: 50px;
 }
 input[type=text]{
     width: 500px;
@@ -63,10 +63,17 @@ aside{
 button{
     background-color: #15151F;
     border: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 form{
     display: flex;
     justify-content: space-between;
     align-items: center;
     flex-basis: 100%;
+}
+button svg{
+    height: 35px;
+    width: 35px;
 }
