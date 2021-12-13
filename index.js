@@ -14,7 +14,7 @@ io.on('connection', socket => {
     socket.on('enviar', (msg)=>{
         console.log(socket.id)
         console.log(msg)
-        io.emit('enviar', msg)
+        socket.broadcast.emit('enviar', msg)
     })
 })
 server.listen(3000, ()=> console.log('servidor na porta 3000'))

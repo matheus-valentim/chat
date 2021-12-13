@@ -1,24 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@600;700&display=swap');
 *{
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
 }
 header p{
     color: white;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
 }
  header svg{
     fill: white;
+    height: 35px;
+    width: 35px;
+    padding-bottom: 6px;
+    padding-left: 7px;
 }
 header{
     display: flex;
+    background-color: #5A5AD0;
+    align-items: center;
 }
 .container{
     height: 100vh;
     display: grid;
     grid-template-rows: 0.5fr 5fr 0.5fr;
-}
-header{
-    background-color: #5A5AD0;
 }
 aside{
     background-color: #15151F;
@@ -30,14 +37,11 @@ main{
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.webshit{
-    display: flex;
-    justify-content: center;
-    align-items: center;
     border: white 1px solid;
     border-radius: 20px;
-    padding: 2px 7px;
+    max-height: 35px;
+    padding: 0px 20px;
+    margin-left: 60px;
 }
 input[type=text]{
     width: 500px;
@@ -45,6 +49,11 @@ input[type=text]{
     border: 1px solid white;
     border-radius: 20px;
     padding: 2px;
+    margin-left: 60px;
+}
+input[type=text]:focus{
+    background-color: rgb(189, 188, 188);
+    outline: none;
 }
 aside{
     display: flex;
@@ -54,4 +63,10 @@ aside{
 button{
     background-color: #15151F;
     border: none;
+}
+form{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-basis: 100%;
 }
