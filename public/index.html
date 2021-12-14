@@ -59,23 +59,36 @@
         let lista = document.getElementById('lista')
         let campo = document.getElementById('campo')
 
-        const adicionar = (msg) =>{
-            var li = document.createElement('li')
-            li.textContent = msg
-            lista.appendChild(li)
-            lista.scrollTo(0, lista.scrollHeight)
+        const receber = (msg) =>{
+            const div = document.createElement('div')
+            const p = document.createElement('p')
+            p.textContent = msg
+            div.appendChild(p)
+            lista.appendChild(div)
+            p.classList.add('receber')
+            window.scrollTo(0, document.body.scrollHeight)
+        }
+
+        const enviar = (msg) =>{
+            const div = document.createElement('div')
+            const p = document.createElement('p')
+            p.textContent = msg
+            div.appendChild(p)
+            lista.appendChild(div)
+            p.classList.add('enviada')
+            window.scrollTo(0, document.body.scrollHeight)
         }
 
         campo.addEventListener('submit', (evento) => {
             evento.preventDefault()
             if(input.value){
-                adicionar(input.value)
+                enviar(input.value)
                 socket.emit('enviar', input.value)
                 input.value = ''
             }
         })
         socket.on('enviar', (msg) => {
-            adicionar(msg)
+            receber(msg)
         })
         
     </script>

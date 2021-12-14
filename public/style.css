@@ -21,17 +21,20 @@ header{
     display: flex;
     background-color: #5A5AD0;
     align-items: center;
+    height: 50px;
+    width: 100%;
+    position: sticky;
+    top: 0;
 }
 .container{
     height: 100vh;
-    display: grid;
-    grid-template-rows: 0.5fr 5fr 0.5fr;
 }
-aside{
-    background-color: #15151F;
-}
+
 main{
     background-color: #1D1D29;
+    overflow-y: hidden;
+    min-height: calc(100% - 100px);
+    content: '';
 }
 .webshit{
     display: flex;
@@ -44,21 +47,28 @@ main{
     margin-left: 50px;
 }
 input[type=text]{
-    width: 500px;
+    width: 60vw;
     background-color: #232331;
     border: 1px solid white;
     border-radius: 20px;
     padding: 2px;
     margin-left: 60px;
+    color: white;
 }
 input[type=text]:focus{
     background-color: rgb(189, 188, 188);
+    color: black;
     outline: none;
 }
 aside{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    background-color: #15151F;
+    position: sticky;
+    bottom: 0;
+    height: 50px;
+    width: 100%;
 }
 button{
     background-color: #15151F;
@@ -66,6 +76,7 @@ button{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 30px;
 }
 form{
     display: flex;
@@ -76,4 +87,27 @@ form{
 button svg{
     height: 35px;
     width: 35px;
+}
+ul{
+    display: flex;
+    flex-direction: column;
+}
+.enviada{
+    background-color:white;
+    border-radius: 22px;
+    word-wrap: break-word;
+    padding: 5px;
+    list-style: none;
+    margin: 10px;
+    display: inline-block;
+    float: right;
+}
+.receber{
+    background-color:white;
+    border-radius: 22px;
+    word-wrap: break-word;
+    padding: 5px;
+    list-style: none;
+    margin: 10px;
+    display: inline-block;
 }
