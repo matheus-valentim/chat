@@ -7,6 +7,7 @@
 O projeto ainda está em desenvolvimento e as próximas atualizações serão voltadas nas seguintes tarefas:
 
 - [ ] Codificação do registro de usuário
+- [ ] Adicioanr emojis
 - [ ] Codificação do login de usuário
 - [ ] Criação da função de redefinir/recuperar a senha
 - [ ] Adicionar uma função para enviar imagens
